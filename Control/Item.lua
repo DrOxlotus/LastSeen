@@ -5,7 +5,7 @@ local L = addonTable.L
 
 local ignoredItemTypes = {
 	"Quest",
-	--"Tradeskill",
+	"Tradeskill",
 }
 
 -- Item Information Variables
