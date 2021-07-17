@@ -5,11 +5,13 @@ local L = addonTable.L
 
 local ignoredItemTypes = {
 	"Quest",
-	"Tradeskill",
+	--"Tradeskill",
 }
 
 -- Item Information Variables
 local itemID, itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture, itemSellPrice, itemClassID, itemSubclassID, itemBindType, itemExpacID, itemSetID, itemIsCraftingReagent
+
+local lootSourceInfo, creatureID
 
 e:RegisterEvent("LOOT_OPENED")
 e:RegisterEvent("LOOT_READY")
@@ -20,38 +22,47 @@ e:SetScript("OnEvent", function(self, event, ...)
 		local lootItems = GetNumLootItems()
 		for i = 1, lootItems do
 			itemLink = GetLootSlotLink(i)
-			if (itemLink) then
-				_, itemID = strsplit(":", itemLink); itemID = tonumber(itemID)
-				itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture, itemSellPrice, itemClassID, itemSubclassID, itemBindType, itemExpacID, itemSetID, itemIsCraftingReagent = GetItemInfo(itemLink)
-				-- We need to filter out items that we don't care about.
-				if (itemQuality < 1) then return end
-				for j = 1, #ignoredItemTypes do
-					if (ignoredItemTypes[j] == itemType) then return end
+			lootSourceInfo = { GetLootSourceInfo(i) }
+			for j = 1, #lootSourceInfo, 2 do
+				if (itemLink) then
+					-- A GUID is passed back to us that contains the ID of where the item sourced from (e.g. an NPC), let's cast that to a number and use it later.
+					_, _, _, _, _, creatureID = strsplit("-", lootSourceInfo[j]); creatureID = tonumber(creatureID)
+					_, itemID = strsplit(":", itemLink); itemID = tonumber(itemID)
+					itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture, itemSellPrice, itemClassID, itemSubclassID, itemBindType, itemExpacID, itemSetID, itemIsCraftingReagent = GetItemInfo(itemLink)
+					-- We need to filter out items that we don't care about.
+					if (itemQuality < 1) then return end
+					for j = 1, #ignoredItemTypes do
+						if (ignoredItemTypes[j] == itemType) then return end
+					end
+					-- The item shouldn't be filtered out, so let's add it to the Items table.
+					LastSeenItems[itemID] = {
+						itemName = itemName,
+						itemLink = itemLink,
+						itemQuality = itemQuality,
+						itemLevel = itemLevel,
+						itemMinLevel = itemMinLevel,
+						itemType = itemType,
+						itemSubType = itemSubType,
+						itemStackCount = itemStackCount,
+						itemEquipLoc = itemEquipLoc,
+						itemTexture = itemTexture,
+						itemSellPrice = itemSellPrice,
+						itemClassID = itemClassID,
+						itemSubclassID = itemSubclassID,
+						itemBindType = itemBindType,
+						itemExpacID = itemExpacID,
+						itemSetID = itemSetID,
+						itemIsCraftingReagent = itemIsCraftingReagent,
+						playerInfo = {
+							race = addonTable.playerRace,
+							class = addonTable.playerClass,
+							level = addonTable.playerLevel,
+						},
+						sourceInfo = {
+							map = addonTable.map,
+						},
+					}
 				end
-				LastSeenItems[itemID] = {
-					itemName = itemName,
-					itemLink = itemLink,
-					itemQuality = itemQuality,
-					itemLevel = itemLevel,
-					itemMinLevel = itemMinLevel,
-					itemType = itemType,
-					itemSubType = itemSubType,
-					itemStackCount = itemStackCount,
-					itemEquipLoc = itemEquipLoc,
-					itemTexture = itemTexture,
-					itemSellPrice = itemSellPrice,
-					itemClassID = itemClassID,
-					itemSubclassID = itemSubclassID,
-					itemBindType = itemBindType,
-					itemExpacID = itemExpacID,
-					itemSetID = itemSetID,
-					itemIsCraftingReagent = itemIsCraftingReagent,
-					playerInfo = {
-						race = addonTable.playerRace,
-						class = addonTable.playerClass,
-						level = addonTable.playerLevel,
-					},
-				}
 			end
 			print(L["COLORED_ADDON_NAME"] .. L["GREEN_PLUS"] .. "|T" .. itemTexture .. ":0|t" .. itemLink)
 		end
