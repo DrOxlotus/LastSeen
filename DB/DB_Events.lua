@@ -18,8 +18,7 @@ local events = {
 	"QUEST_LOOT_RECEIVED",
 	"UPDATE_MOUSEOVER_UNIT",
 	"UI_INFO_MESSAGE",
-	"UNIT_SPELLCAST_SENT",
-	"ZONE_CHANGED_NEW_AREA"
+	"UNIT_SPELLCAST_SENT"
 };
 -- Synopsis: These are events that must occur before the addon will take action. Each event is documented in main.lua.
 
