@@ -13,6 +13,8 @@ local itemID, itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType
 
 local lootSourceInfo, creatureID
 
+local patch
+
 e:RegisterEvent("LOOT_OPENED")
 e:RegisterEvent("LOOT_READY")
 e:RegisterEvent("LOOT_CLOSED")
@@ -34,6 +36,8 @@ e:SetScript("OnEvent", function(self, event, ...)
 					for j = 1, #ignoredItemTypes do
 						if (ignoredItemTypes[j] == itemType) then return end
 					end
+					-- Let's get the current patch to store in the table.
+					patch = GetBuildInfo()
 					-- The item shouldn't be filtered out, so let's add it to the Items table.
 					LastSeenItems[itemID] = {
 						itemName = itemName,
@@ -61,7 +65,8 @@ e:SetScript("OnEvent", function(self, event, ...)
 						sourceInfo = {
 							name = LastSeenCreatures[creatureID].creatureName,
 							map = LastSeenCreatures[creatureID].map,
-							dateTime = date("%d/%m/%y %H:%M:%S")
+							lootDate = date("%d/%m/%y"),
+							patch = patch,
 						},
 					}
 					print(L["COLORED_ADDON_NAME"] .. L["GREEN_PLUS"] .. "|T" .. itemTexture .. ":0|t" .. itemLink)
