@@ -1,5 +1,6 @@
 local addonName, addonTable = ...
 local e = CreateFrame("Frame", "LastSeenEventFrame")
+local L = addonTable.L
 
 e:RegisterEvent("ADDON_LOADED")
 

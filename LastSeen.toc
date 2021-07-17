@@ -9,11 +9,11 @@
 # The file controlling localization for the addon.
 Locale.lua
 
-# The controllers overseeing the processing of items.
-Control\Item.lua
-
 # Initialization
 LastSeen.lua
+
+# The controllers overseeing the processing of items.
+Control\Item.lua
 
 #classes\Widget.lua
 #classes\Frame.lua
