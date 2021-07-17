@@ -16,6 +16,9 @@ e:SetScript("OnEvent", function(self, event, ...)
 			if (LastSeenItems == nil) then
 				LastSeenItems = {}
 			end
+			if (LastSeenCreatures == nil) then
+				LastSeenCreatures = {}
+			end
 		end
 	end
 	
