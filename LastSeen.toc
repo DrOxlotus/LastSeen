@@ -1,8 +1,8 @@
 ## Author: Lightsky
 ## Interface: 90100
-## Name: LastSeen
+## Name: |cff00CCFFLastSeen|r
 ## Notes: Harvests source data on items looted by your characters to simplify item tracking in the future.
-## Title: LastSeen
+## Title: |cff00CCFFLastSeen|r
 ## SavedVariables: LastSeenItems, LastSeenCreaturesDB, LastSeenEncountersDB, LastSeenIgnoredItemsDB, LastSeenItemsDB, LastSeenMapsDB, LastSeenQuestsDB, LastSeenSettingsCacheDB, LastSeenLootTemplate, LastSeenHistoryDB
 ## Version: 3.1.0
 
