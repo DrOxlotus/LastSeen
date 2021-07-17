@@ -61,6 +61,7 @@ e:SetScript("OnEvent", function(self, event, ...)
 						sourceInfo = {
 							name = LastSeenCreatures[creatureID].creatureName,
 							map = LastSeenCreatures[creatureID].map,
+							dateTime = date("%d/%m/%y %H:%M:%S")
 						},
 					}
 					print(L["COLORED_ADDON_NAME"] .. L["GREEN_PLUS"] .. "|T" .. itemTexture .. ":0|t" .. itemLink)
