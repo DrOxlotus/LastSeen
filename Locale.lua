@@ -37,8 +37,6 @@ if (locale == "enGB" or locale == "enUS") then
 		L["ARMOR_TEMPLATE_LEATHER"]					= "Leather";
 		L["ARMOR_TEMPLATE_MAIL"]					= "Mail";
 		L["ARMOR_TEMPLATE_PLATE"]					= "Plate";
-		L["AUCTION_HOUSE"]							= "Auction House";
-		L["AUCTION_WON_SUBJECT"]					= "Auction won:";
 		L["BAD_DATA_SINGLE"]						= " |cffffdc14item purged from the items table due to corrupt information or it's been ignored.|r";
 		L["BAD_DATA_MULTIPLE"]						= " |cffffdc14item(s) purged from the items table due to corrupt information or they're now ignored.|r";
 		L["BAD_REQUEST"]							= "|cffffdc14Bad request. Please try again.|r";
@@ -93,7 +91,6 @@ if (locale == "enGB" or locale == "enUS") then
 		L["PLAYER"] 								= "Player";
 		L["QUESTS"]									= "Quests";
 		L["RELEASE"] 								= "[" .. GetAddOnMetadata(addon, "Version") .. "]";
-		L["REMOVED"]								= "Removed";
 		L["RESULTS"]								= " result(s)";
 		L["RINGS"]									= "Rings";
 		L["SCAN_ON_LOOT"] 							= "Scan on Loot";

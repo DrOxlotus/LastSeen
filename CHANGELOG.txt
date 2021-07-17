@@ -1,0 +1,5 @@
+## [3.1.0]
+Removals:
+	- Quest rewards are no longer tracked.
+	- Loot from the mailbox is no longer tracked. (This specifically affects items acquired from the Auction House.)
+	- Items purchased from merchants are no longer tracked.
