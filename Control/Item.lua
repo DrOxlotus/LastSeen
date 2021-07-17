@@ -59,7 +59,8 @@ e:SetScript("OnEvent", function(self, event, ...)
 							level = addonTable.playerLevel,
 						},
 						sourceInfo = {
-							map = addonTable.map,
+							name = LastSeenCreatures[creatureID].creatureName,
+							map = LastSeenCreatures[creatureID].map,
 						},
 					}
 					print(L["COLORED_ADDON_NAME"] .. L["GREEN_PLUS"] .. "|T" .. itemTexture .. ":0|t" .. itemLink)
