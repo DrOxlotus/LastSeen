@@ -46,6 +46,11 @@ e:SetScript("OnEvent", function(self, event, ...)
 					itemExpacID = itemExpacID,
 					itemSetID = itemSetID,
 					itemIsCraftingReagent = itemIsCraftingReagent,
+					playerInfo = {
+						race = addonTable.playerRace,
+						class = addonTable.playerClass,
+						level = addonTable.playerLevel,
+					},
 				}
 			end
 			print(L["COLORED_ADDON_NAME"] .. L["GREEN_PLUS"] .. "|T" .. itemTexture .. ":0|t" .. itemLink)
