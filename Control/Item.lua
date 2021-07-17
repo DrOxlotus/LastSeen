@@ -32,6 +32,7 @@ e:SetScript("OnEvent", function(self, event, ...)
 					_, itemID = strsplit(":", itemLink); itemID = tonumber(itemID)
 					itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture, itemSellPrice, itemClassID, itemSubclassID, itemBindType, itemExpacID, itemSetID, itemIsCraftingReagent = GetItemInfo(itemLink)
 					-- We need to filter out items that we don't care about.
+					if (itemQuality == nil) then return end
 					if (itemQuality < 1) then return end
 					for j = 1, #ignoredItemTypes do
 						if (ignoredItemTypes[j] == itemType) then return end
