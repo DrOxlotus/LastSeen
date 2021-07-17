@@ -13,7 +13,7 @@ local itemID, itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType
 
 local lootSourceInfo, creatureID
 
-local patch
+local patch, lootDate
 
 e:RegisterEvent("LOOT_OPENED")
 e:RegisterEvent("LOOT_READY")
@@ -36,40 +36,67 @@ e:SetScript("OnEvent", function(self, event, ...)
 					for j = 1, #ignoredItemTypes do
 						if (ignoredItemTypes[j] == itemType) then return end
 					end
-					-- Let's get the current patch to store in the table.
+					-- Let's get the current patch and date to store in the table.
 					patch = GetBuildInfo()
+					lootDate = date("%d/%m/%y")
 					-- The item shouldn't be filtered out, so let's add it to the Items table.
-					LastSeenItems[itemID] = {
-						itemName = itemName,
-						itemLink = itemLink,
-						itemQuality = itemQuality,
-						itemLevel = itemLevel,
-						itemMinLevel = itemMinLevel,
-						itemType = itemType,
-						itemSubType = itemSubType,
-						itemStackCount = itemStackCount,
-						itemEquipLoc = itemEquipLoc,
-						itemTexture = itemTexture,
-						itemSellPrice = itemSellPrice,
-						itemClassID = itemClassID,
-						itemSubclassID = itemSubclassID,
-						itemBindType = itemBindType,
-						itemExpacID = itemExpacID,
-						itemSetID = itemSetID,
-						itemIsCraftingReagent = itemIsCraftingReagent,
-						playerInfo = {
-							race = addonTable.playerRace,
-							class = addonTable.playerClass,
-							level = addonTable.playerLevel,
-						},
-						sourceInfo = {
-							name = LastSeenCreatures[creatureID].creatureName,
-							map = LastSeenCreatures[creatureID].map,
-							lootDate = date("%d/%m/%y"),
-							patch = patch,
-						},
-					}
-					print(L["COLORED_ADDON_NAME"] .. L["GREEN_PLUS"] .. "|T" .. itemTexture .. ":0|t" .. itemLink)
+					if (LastSeenItems[itemID]) then
+						-- This isn't a NEW item. Confirm if any information requires an update.
+						if (LastSeenItems[itemID].lootDate ~= lootDate) then
+							LastSeenItems[itemID].lootDate = lootDate
+						end
+						if (LastSeenItems[itemID].patch ~= patch) then
+							LastSeenItems[itemID].patch = patch
+						end
+						if (LastSeenItems[itemID].map ~= LastSeenCreatures[creatureID].map) then
+							LastSeenItems[itemID].map = LastSeenCreatures[creatureID].map
+						end
+						if (LastSeenItems[itemID].name ~= LastSeenCreatures[creatureID].creatureName) then
+							LastSeenItems[itemID].name = LastSeenCreatures[creatureID].creatureName
+						end
+						if (LastSeenItems[itemID].race ~= addonTable.playerRace) then
+							LastSeenItems[itemID].race = addonTable.playerRace
+						end
+						if (LastSeenItems[itemID].class ~= addonTable.playerClass) then
+							LastSeenItems[itemID].class = addonTable.playerClass
+						end
+						if (LastSeenItems[itemID].level ~= addonTable.playerLevel) then
+							LastSeenItems[itemID].level = addonTable.playerLevel
+						end
+					else
+						-- This is a new item.
+						LastSeenItems[itemID] = {
+							itemName = itemName,
+							itemLink = itemLink,
+							itemQuality = itemQuality,
+							itemLevel = itemLevel,
+							itemMinLevel = itemMinLevel,
+							itemType = itemType,
+							itemSubType = itemSubType,
+							itemStackCount = itemStackCount,
+							itemEquipLoc = itemEquipLoc,
+							itemTexture = itemTexture,
+							itemSellPrice = itemSellPrice,
+							itemClassID = itemClassID,
+							itemSubclassID = itemSubclassID,
+							itemBindType = itemBindType,
+							itemExpacID = itemExpacID,
+							itemSetID = itemSetID,
+							itemIsCraftingReagent = itemIsCraftingReagent,
+							playerInfo = {
+								race = addonTable.playerRace,
+								class = addonTable.playerClass,
+								level = addonTable.playerLevel,
+							},
+							sourceInfo = {
+								name = LastSeenCreatures[creatureID].creatureName,
+								map = LastSeenCreatures[creatureID].map,
+								lootDate = lootDate,
+								patch = patch,
+							},
+						}
+						print(L["COLORED_ADDON_NAME"] .. L["GREEN_PLUS"] .. "|T" .. itemTexture .. ":0|t" .. itemLink)
+					end
 				end
 			end
 		end
