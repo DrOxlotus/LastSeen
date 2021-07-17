@@ -62,9 +62,9 @@ e:SetScript("OnEvent", function(self, event, ...)
 							map = addonTable.map,
 						},
 					}
+					print(L["COLORED_ADDON_NAME"] .. L["GREEN_PLUS"] .. "|T" .. itemTexture .. ":0|t" .. itemLink)
 				end
 			end
-			print(L["COLORED_ADDON_NAME"] .. L["GREEN_PLUS"] .. "|T" .. itemTexture .. ":0|t" .. itemLink)
 		end
 	end
 end)
