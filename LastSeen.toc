@@ -1,32 +1,41 @@
+## Author: Lightsky
 ## Interface: 90100
-## Version: 3.0.8
-## Title: LastSeen
+## Name: LastSeen
 ## Notes: Harvests source data on items looted by your characters to simplify item tracking in the future.
-## Author: iamlightsky
-## SavedVariables: LastSeenCreaturesDB, LastSeenEncountersDB, LastSeenIgnoredItemsDB, LastSeenItemsDB, LastSeenMapsDB, LastSeenQuestsDB, LastSeenSettingsCacheDB, LastSeenLootTemplate, LastSeenHistoryDB
+## Title: LastSeen
+## SavedVariables: LastSeenItems, LastSeenCreaturesDB, LastSeenEncountersDB, LastSeenIgnoredItemsDB, LastSeenItemsDB, LastSeenMapsDB, LastSeenQuestsDB, LastSeenSettingsCacheDB, LastSeenLootTemplate, LastSeenHistoryDB
+## Version: 3.1.0
 
-locales\Locale.lua
-classes\Widget.lua
-classes\Frame.lua
-db\DB_Variables.lua
-db\DB_Events.lua
-db\DB_IgnoredItemsOrItemTypes.lua
-db\DB_WhitelistedItems.lua
-Commands.lua
-Settings.lua
-Defaults.lua
-ClassDefaults.lua
-handlers\QuestHandler.lua
-handlers\ItemHandler.lua
-handlers\NameplateHandler.lua
-handlers\FunctionHandler.lua
-handlers\CommandHandler.lua
-handlers\TooltipHandler.lua
-handlers\MapHandler.lua
-handlers\KeybindHandler.lua
-bin\Print.lua
-bin\Search_ID.lua
-bin\Search_Text.lua
-bin\Ignore_ID.lua
-bin\Ignore_Text.lua
-Main.lua
+# The file controlling localization for the addon.
+Locale.lua
+
+# The controllers overseeing the processing of items.
+Control\Item.lua
+
+# Initialization
+LastSeen.lua
+
+#classes\Widget.lua
+#classes\Frame.lua
+#db\DB_Variables.lua
+#db\DB_Events.lua
+#db\DB_IgnoredItemsOrItemTypes.lua
+#db\DB_WhitelistedItems.lua
+#Commands.lua
+#Settings.lua
+#Defaults.lua
+#ClassDefaults.lua
+#handlers\QuestHandler.lua
+#handlers\ItemHandler.lua
+#handlers\NameplateHandler.lua
+#handlers\FunctionHandler.lua
+#handlers\CommandHandler.lua
+#handlers\TooltipHandler.lua
+#handlers\MapHandler.lua
+#handlers\KeybindHandler.lua
+#bin\Print.lua
+#bin\Search_ID.lua
+#bin\Search_Text.lua
+#bin\Ignore_ID.lua
+#bin\Ignore_Text.lua
+#Main.lua
