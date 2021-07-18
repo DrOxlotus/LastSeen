@@ -25,11 +25,17 @@ local L = setmetatable({}, { __index = function(t, k)
 	return v
 end })
 if (locale == "enGB" or locale == "enUS") then
+		-- Objects
+		L["Spoils of Blackfathom"]					= "Spoils of Blackfathom"
 		-- Strings
-		L["COLORED_ADDON_NAME"] 					= "|cff00CCFF" .. addonName .. "|r: "
+		L["Colored Addon Name"] 					= "|cff00CCFF" .. addonName .. "|r: "
+		L["Info Source Unavailable"]				= "An item without a known source was looted. Please report the information below."
+		L["Unknown Source"]							= "Unknown Source"
 		-- Symbols
-		L["GREEN_PLUS"]								= "|cff52D66C+|r "
-		L["RED_MINUS"]								= "|cffEF5858-|r "
+		L["Green Plus"]								= "|cff52D66C+|r "
+		L["Red Minus"]								= "|cffEF5858-|r "
+		
+		
 		--[[L["ADDED"]									= "Added";
 		L["ADDON_NAME_SETTINGS"] 					= "|cff00ccff" .. addon .. "|r";
 		L["APPROXIMATELY"] 							= "approximately";

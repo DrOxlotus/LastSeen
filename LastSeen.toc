@@ -12,6 +12,9 @@ Locale.lua
 # Initialization
 LastSeen.lua
 
+# The information hubs that the addon uses.
+Database\Objects.lua
+
 # The controllers overseeing the processing of items.
 Control\Creature.lua
 Control\Item.lua
