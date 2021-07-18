@@ -26,6 +26,7 @@ local L = setmetatable({}, { __index = function(t, k)
 end })
 if (locale == "enGB" or locale == "enUS") then
 		-- Objects
+		L["Large Battered Chest"]					= "Large Battered Chest"
 		L["Spoils of Blackfathom"]					= "Spoils of Blackfathom"
 		-- Strings
 		L["Colored Addon Name"] 					= "|cff00CCFF" .. addonName .. "|r: "

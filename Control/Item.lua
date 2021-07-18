@@ -6,6 +6,7 @@ local L = addonTable.L
 local ignoredItemTypes = {
 	"Quest",
 	"Tradeskill",
+	"Food & Drink",
 }
 
 -- Item Information Variables
@@ -36,6 +37,7 @@ e:SetScript("OnEvent", function(self, event, ...)
 					if (itemQuality < 1) then return end
 					for j = 1, #ignoredItemTypes do
 						if (ignoredItemTypes[j] == itemType) then return end
+						if (ignoredItemTypes[j] == itemSubType) then return end
 					end
 					-- Let's get the current patch and date to store in the table.
 					patch = GetBuildInfo()
