@@ -111,10 +111,10 @@ e:SetScript("OnEvent", function(self, event, ...)
 								patch = patch,
 							},
 						}
-						print("A" .. " " .. L["Colored Addon Name"] .. L["Green Plus"] .. "|T" .. itemTexture .. ":0|t" .. itemLink)
+						isItemChanged = true
 					end
 					if (isItemChanged) then
-						print("B" .. " " .. L["Colored Addon Name"] .. L["Green Plus"] .. "|T" .. itemTexture .. ":0|t" .. itemLink)
+						print(L["Colored Addon Name"] .. L["Green Plus"] .. "|T" .. itemTexture .. ":0|t" .. itemLink)
 						isItemChanged = false
 					end
 				end
