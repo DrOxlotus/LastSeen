@@ -4,7 +4,7 @@
 ## Notes: Harvests source data on items looted by your characters to simplify item tracking in the future.
 ## Title: |cff00CCFFLastSeen|r
 ## SavedVariables: LastSeenItems, LastSeenCreatures, LastSeenCreaturesDB, LastSeenEncountersDB, LastSeenIgnoredItemsDB, LastSeenItemsDB, LastSeenMapsDB, LastSeenQuestsDB, LastSeenSettingsCacheDB, LastSeenLootTemplate, LastSeenHistoryDB
-## Version: 3.1.0
+## Version: 4.0.0
 
 # The file controlling localization for the addon.
 Locale.lua
