@@ -27,7 +27,7 @@ end })
 if (locale == "enGB" or locale == "enUS") then
 		-- Objects
 		L["Large Battered Chest"]					= "Large Battered Chest"
-		L["Cache of Pure Energy"					= "Cache of Pure Energy"
+		L["Cache of Pure Energy"]					= "Cache of Pure Energy"
 		L["Spoils of Blackfathom"]					= "Spoils of Blackfathom"
 		-- Strings
 		L["Colored Addon Name"] 					= "|cff00CCFF" .. addonName .. "|r: "
