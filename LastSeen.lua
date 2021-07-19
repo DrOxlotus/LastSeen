@@ -10,6 +10,17 @@ e:RegisterEvent("PLAYER_LEVEL_CHANGED")
 e:RegisterEvent("PLAYER_LOGIN")
 e:RegisterEvent("ZONE_CHANGED_NEW_AREA")
 
+local function IsUnitInCombat(unit)
+	C_Timer.After(0, function()
+		C_Timer.After(1, function()
+			if (UnitAffectingCombat(unit)) then
+				IsUnitInCombat(unit)
+			else
+				return false
+			end
+		end)
+	end)
+end
 
 e:SetScript("OnEvent", function(self, event, ...)
 	if (event == "ADDON_LOADED") then
@@ -41,8 +52,10 @@ e:SetScript("OnEvent", function(self, event, ...)
 	end
 	
 	if (event == "ZONE_CHANGED_NEW_AREA") then
-		uiMapID = C_Map.GetBestMapForUnit("player")
-		uiMapName = C_Map.GetMapInfo(uiMapID).name
-		addonTable.uiMapName = uiMapName
+		if (IsUnitInCombat("player") == false) then
+			uiMapID = C_Map.GetBestMapForUnit("player")
+			uiMapName = C_Map.GetMapInfo(uiMapID).name
+			addonTable.uiMapName = uiMapName
+		end
 	end
 end)
