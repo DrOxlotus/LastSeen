@@ -24,7 +24,7 @@ e:SetScript("OnEvent", function(self, event, ...)
 	if (event == "LOOT_OPENED" or event == "LOOT_READY") then
 		local numLootItems = GetNumLootItems()
 		if (numLootItems < 1) then return end
-		for i = numLootItems, 1, -1 do
+		for i = 1, numLootItems do
 			itemLink = GetLootSlotLink(i)
 			if (itemLink) then
 				lootSourceGUID = (GetLootSourceInfo(i))
