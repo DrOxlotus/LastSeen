@@ -2,9 +2,13 @@ local addonName, addonTable = ...
 local e = CreateFrame("Frame", "LastSeenEventFrame")
 local L = addonTable.L
 
+local uiMapID = 0
+local uiMapName = ""
+
 e:RegisterEvent("ADDON_LOADED")
 e:RegisterEvent("PLAYER_LEVEL_CHANGED")
 e:RegisterEvent("PLAYER_LOGIN")
+e:RegisterEvent("ZONE_CHANGED_NEW_AREA")
 
 
 e:SetScript("OnEvent", function(self, event, ...)
@@ -31,8 +35,14 @@ e:SetScript("OnEvent", function(self, event, ...)
 		local playerRace = UnitRace("player")
 		local playerClass = UnitClass("player")
 		local playerLevel = UnitLevel("player")
-		local uiMapID = C_Map.GetBestMapForUnit("player")
-		local uiMapName = C_Map.GetMapInfo(uiMapID).name
-		addonTable.playerRace, addonTable.playerClass, addonTable.playerLevel = playerRace, playerClass, playerLevel
+		uiMapID = C_Map.GetBestMapForUnit("player")
+		uiMapName = C_Map.GetMapInfo(uiMapID).name
+		addonTable.playerRace, addonTable.playerClass, addonTable.playerLevel, addonTable.uiMapName = playerRace, playerClass, playerLevel, uiMapName
+	end
+	
+	if (event == "ZONE_CHANGED_NEW_AREA") then
+		uiMapID = C_Map.GetBestMapForUnit("player")
+		uiMapName = C_Map.GetMapInfo(uiMapID).name
+		addonTable.uiMapName = uiMapName
 	end
 end)

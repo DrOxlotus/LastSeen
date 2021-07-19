@@ -65,11 +65,11 @@ e:SetScript("OnEvent", function(self, event, ...)
 						if (LastSeenItems[itemID].patch ~= patch) then
 							LastSeenItems[itemID].patch = patch
 						end
-						if (LastSeenItems[itemID].map ~= LastSeenCreatures[entityID].map) then
-							LastSeenItems[itemID].map = LastSeenCreatures[entityID].map
+						if (LastSeenItems[itemID].map ~= addonTable.uiMapName) then
+							LastSeenItems[itemID].map = addonTable.uiMapName
 						end
-						if (LastSeenItems[itemID].name ~= LastSeenCreatures[entityID].creatureName) then
-							LastSeenItems[itemID].name = LastSeenCreatures[entityID].creatureName
+						if (LastSeenItems[itemID].name ~= source) then
+							LastSeenItems[itemID].name = source
 						end
 						if (LastSeenItems[itemID].class ~= addonTable.playerClass) then
 							LastSeenItems[itemID].class = addonTable.playerClass
