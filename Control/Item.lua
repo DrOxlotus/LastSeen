@@ -7,6 +7,7 @@ local ignoredItemTypes = {
 	"Quest",
 	"Tradeskill",
 	"Food & Drink",
+	"Elixir",
 }
 
 -- Item Information Variables
