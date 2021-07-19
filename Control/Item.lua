@@ -15,7 +15,6 @@ local source, map
 
 local lootSourceGUID, entityID
 local patch, lootDate
-local isItemChanged = false
 
 e:RegisterEvent("LOOT_OPENED")
 e:RegisterEvent("LOOT_READY")
@@ -60,18 +59,15 @@ e:SetScript("OnEvent", function(self, event, ...)
 						-- This isn't a NEW item. Confirm if any information requires an update.
 						if (LastSeenItems[itemID].lootDate ~= lootDate) then
 							LastSeenItems[itemID].lootDate = lootDate
-							isItemChanged = true
 						end
 						if (LastSeenItems[itemID].patch ~= patch) then
 							LastSeenItems[itemID].patch = patch
-							isItemChanged = true
 						end
 						if (LastSeenItems[itemID].map ~= LastSeenCreatures[entityID].map) then
 							LastSeenItems[itemID].map = LastSeenCreatures[entityID].map
 						end
 						if (LastSeenItems[itemID].name ~= LastSeenCreatures[entityID].creatureName) then
 							LastSeenItems[itemID].name = LastSeenCreatures[entityID].creatureName
-							isItemChanged = true
 						end
 						if (LastSeenItems[itemID].class ~= addonTable.playerClass) then
 							LastSeenItems[itemID].class = addonTable.playerClass
@@ -111,11 +107,7 @@ e:SetScript("OnEvent", function(self, event, ...)
 								patch = patch,
 							},
 						}
-						isItemChanged = true
-					end
-					if (isItemChanged) then
 						print(L["Colored Addon Name"] .. L["Green Plus"] .. "|T" .. itemTexture .. ":0|t" .. itemLink)
-						isItemChanged = false
 					end
 				end
 			end

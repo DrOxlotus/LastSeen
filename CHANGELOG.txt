@@ -1,5 +1,6 @@
 ## [4.0.0]
 Changes:
+	- The addon no longer alerts the player when an item is updated.
 	- The default date format is now DAY/MONTH/YEAR. This can't be changed.
 Removals:
 	- Quest rewards are no longer tracked.
