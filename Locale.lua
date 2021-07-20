@@ -30,6 +30,8 @@ if (locale == "enGB" or locale == "enUS") then
 		L["Cache of Pure Energy"]					= "Cache of Pure Energy"
 		L["Spoils of Blackfathom"]					= "Spoils of Blackfathom"
 		L["Invasive Mawshroom"]						= "Invasive Mawshroom"
+		L["Mawsworn Cache"]							= "Mawsworn Cache"
+		L["Nest of Unusual Materials"]				= "Nest of Unusual Materials"
 		-- Strings
 		L["Colored Addon Name"] 					= "|cff00CCFF" .. addonName .. "|r: "
 		L["Info Source Unavailable"]				= "An item without a known source was looted. Please report the information below."
