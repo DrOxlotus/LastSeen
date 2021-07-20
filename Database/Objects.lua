@@ -25,6 +25,12 @@ local objects = {
 	[369335]		= L["Nest of Unusual Materials"],
 	[369336]		= L["Nest of Unusual Materials"],
 	[369337]		= L["Nest of Unusual Materials"],
+	[368645]		= L["Rift Hidden Cache"],
+	[368646]		= L["Rift Hidden Cache"],
+	[368647]		= L["Rift Hidden Cache"],
+	[368648]		= L["Rift Hidden Cache"],
+	[368649]		= L["Rift Hidden Cache"],
+	[368650]		= L["Rift Hidden Cache"],
 }
 
 addonTable.Objects = objects
