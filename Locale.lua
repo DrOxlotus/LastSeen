@@ -31,6 +31,7 @@ if (locale == "enGB" or locale == "enUS") then
 		L["Spoils of Blackfathom"]					= "Spoils of Blackfathom"
 		L["Invasive Mawshroom"]						= "Invasive Mawshroom"
 		L["Domination Sealed Chest"]				= "Domination Sealed Chest"
+		L["Helgarde Supply Cache"]					= "Helgarde Supply Cache"
 		L["Mawsworn Cache"]							= "Mawsworn Cache"
 		L["Nest of Unusual Materials"]				= "Nest of Unusual Materials"
 		L["Riftbound Cache"]						= "Riftbound Cache"

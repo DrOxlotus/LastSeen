@@ -6,6 +6,7 @@ local objects = {
 	[214383]		= L["Cache of Pure Energy"],
 	[225817]		= L["Spoils of Blackfathom"],
 	[369132]		= L["Domination Sealed Chest"],
+	[369145]		= L["Helgarde Supply Cache"],
 	[369327]		= L["Invasive Mawshroom"],
 	[369329]		= L["Invasive Mawshroom"],
 	[369330]		= L["Invasive Mawshroom"],
