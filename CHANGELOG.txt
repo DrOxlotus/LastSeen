@@ -1,4 +1,6 @@
 ## [4.0.0]
+Additions:
+	- Added support for lots of objects.
 Changes:
 	- The addon no longer alerts the player when an item is updated.
 	- The default date format is now DAY/MONTH/YEAR. This can't be changed.
