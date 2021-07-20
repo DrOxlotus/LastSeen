@@ -34,6 +34,7 @@ if (locale == "enGB" or locale == "enUS") then
 		L["Helgarde Supply Cache"]					= "Helgarde Supply Cache"
 		L["Mawsworn Cache"]							= "Mawsworn Cache"
 		L["Nest of Unusual Materials"]				= "Nest of Unusual Materials"
+		L["Relic Cache"]							= "Relic Cache"
 		L["Riftbound Cache"]						= "Riftbound Cache"
 		L["Rift Hidden Cache"]						= "Rift Hidden Cache"
 		-- Strings
