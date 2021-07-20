@@ -30,6 +30,7 @@ if (locale == "enGB" or locale == "enUS") then
 		L["Cache of Pure Energy"]					= "Cache of Pure Energy"
 		L["Spoils of Blackfathom"]					= "Spoils of Blackfathom"
 		L["Invasive Mawshroom"]						= "Invasive Mawshroom"
+		L["Domination Sealed Chest"]				= "Domination Sealed Chest"
 		L["Mawsworn Cache"]							= "Mawsworn Cache"
 		L["Nest of Unusual Materials"]				= "Nest of Unusual Materials"
 		L["Riftbound Cache"]						= "Riftbound Cache"
