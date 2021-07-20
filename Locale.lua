@@ -43,6 +43,8 @@ if (locale == "enGB" or locale == "enUS") then
 		-- Symbols
 		L["Green Plus"]								= "|cff52D66C+|r "
 		L["Red Minus"]								= "|cffEF5858-|r "
+		-- Other
+		L["Discord"]								= discord
 		
 		
 		--[[L["ADDED"]									= "Added";

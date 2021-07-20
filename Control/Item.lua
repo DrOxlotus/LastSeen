@@ -54,7 +54,7 @@ e:SetScript("OnEvent", function(self, event, ...)
 					else
 						source = L["Unknown Source"]
 						map = C_Map.GetMapInfo(C_Map.GetBestMapForUnit("player")).name
-						print(L["Colored Addon Name"] .. L["Info Source Unavailable"] .. "\n" .. C_Map.GetMapInfo(C_Map.GetBestMapForUnit("player")).name .. ", [" .. itemLink .. ", " .. entityID .. "]")
+						print(L["Colored Addon Name"] .. L["Info Source Unavailable"] .. "\n" .. C_Map.GetMapInfo(C_Map.GetBestMapForUnit("player")).name .. ", [" .. itemLink .. ", " .. entityID .. "] @" .. L["Discord"])
 					end
 					-- The item shouldn't be filtered out, so let's add it to the Items table.
 					if (LastSeenItems[itemID]) then
