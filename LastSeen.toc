@@ -16,9 +16,11 @@ LastSeen.lua
 Database\IgnoredItems.lua
 Database\Objects.lua
 
-# The controllers overseeing the processing of items.
-Tracking\Creature.lua
-Tracking\Item.lua
+# Trackers are in charge of mining information about their specific assignment.
+Trackers\Creature.lua
+Trackers\Item.lua
+
+Control\Tooltips.lua
 
 #classes\Widget.lua
 #classes\Frame.lua
