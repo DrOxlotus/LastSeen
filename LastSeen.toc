@@ -38,7 +38,6 @@ LastSeen.lua
 #handlers\NameplateHandler.lua
 #handlers\FunctionHandler.lua
 #handlers\CommandHandler.lua
-#handlers\TooltipHandler.lua
 #handlers\MapHandler.lua
 #handlers\KeybindHandler.lua
 #bin\Print.lua
