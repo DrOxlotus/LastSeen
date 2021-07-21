@@ -59,3 +59,7 @@ e:SetScript("OnEvent", function(self, event, ...)
 		end
 	end
 end)
+
+-- These hooks are responsible for adding the tracked information into the tooltip.
+GameTooltip:HookScript("OnTooltipSetItem", addonTable.OnTooltipSetItem)
+ItemRefTooltip:HookScript("OnTooltipSetItem", addonTable.OnTooltipSetItem)

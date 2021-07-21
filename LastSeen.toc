@@ -9,9 +9,6 @@
 # The file controlling localization for the addon.
 Locale.lua
 
-# Initialization
-LastSeen.lua
-
 # The information hubs that the addon uses.
 Database\IgnoredItems.lua
 Database\Objects.lua
@@ -20,7 +17,11 @@ Database\Objects.lua
 Trackers\Creature.lua
 Trackers\Item.lua
 
+# Controllers are responsible for handling UI elements.
 Control\Tooltips.lua
+
+# Initialization
+LastSeen.lua
 
 #classes\Widget.lua
 #classes\Frame.lua
