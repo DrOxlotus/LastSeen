@@ -13,6 +13,7 @@ Locale.lua
 LastSeen.lua
 
 # The information hubs that the addon uses.
+Database\IgnoredItems.lua
 Database\Objects.lua
 
 # The controllers overseeing the processing of items.
