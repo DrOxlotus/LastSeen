@@ -47,9 +47,9 @@ e:SetScript("OnEvent", function(self, event, ...)
 					if (LastSeenCreatures[entityID]) then
 						source = LastSeenCreatures[entityID].creatureName
 						map = LastSeenCreatures[entityID].map
-					elseif (addonTable.allObjects[entityID]) then
+					elseif (addonTable.objects[entityID]) then
 						-- A valid creature wasn't found in the Creatures table to match with the item. Let's check the Objects table now.
-						source = addonTable.allObjects[entityID]
+						source = addonTable.objects[entityID]
 						map = C_Map.GetMapInfo(C_Map.GetBestMapForUnit("player")).name
 					else
 						source = L["Unknown Source"]

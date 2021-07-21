@@ -14,11 +14,10 @@ LastSeen.lua
 
 # The information hubs that the addon uses.
 Database\Objects.lua
-Database\Shadowlands\Chests.lua
 
 # The controllers overseeing the processing of items.
-Control\Creature.lua
-Control\Item.lua
+Tracking\Creature.lua
+Tracking\Item.lua
 
 #classes\Widget.lua
 #classes\Frame.lua
