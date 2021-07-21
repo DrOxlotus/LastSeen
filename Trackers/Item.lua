@@ -35,11 +35,11 @@ e:SetScript("OnEvent", function(self, event, ...)
 					itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture, itemSellPrice, itemClassID, itemSubclassID, itemBindType, itemExpacID, itemSetID, itemIsCraftingReagent = GetItemInfo(itemLink)
 					if (itemQuality == nil) then return end
 					-- We need to filter out items that we don't care about.
-					if (itemQuality < 1) then return end
+					--[[if (itemQuality < 1) then return end
 					for j = 1, #ignoredItemTypes do
 						if (ignoredItemTypes[j] == itemType) then return end
 						if (ignoredItemTypes[j] == itemSubType) then return end
-					end
+					end]]
 					-- Let's get the current patch and date to store in the table.
 					patch = GetBuildInfo()
 					lootDate = date("%d/%m/%y")
