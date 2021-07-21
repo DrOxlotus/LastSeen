@@ -39,7 +39,7 @@ if (locale == "enGB" or locale == "enUS") then
 		L["Rift Hidden Cache"]						= "Rift Hidden Cache"
 		-- Strings
 		L["Colored Addon Name"] 					= "|cff00CCFF" .. addonName .. "|r: "
-		L["Info Source Unavailable"]				= "An item without a known source was looted. Please report the information below."
+		L["Info Source Unavailable"]				= "Please report the information below:"
 		L["Unknown Source"]							= "Unknown Source"
 		-- Symbols
 		L["Green Plus"]								= "|cff52D66C+|r "
