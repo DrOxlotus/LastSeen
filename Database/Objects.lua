@@ -2,6 +2,11 @@ local addonName, addonTable = ...
 local L = addonTable.L
 
 local objects = {
+	[141979]		= L["Ancient Treasure"],
+	[179564]		= L["Gordok Tribute"],
+	[179517]		= L["Treasure of the Shen'dralar"],
+	[169243]		= L["Chest of The Seven"],
+	[179703]		= L["Cache of the Firelord"],
 	[75293]			= L["Large Battered Chest"],
 	[214383]		= L["Cache of Pure Energy"],
 	[225817]		= L["Spoils of Blackfathom"],

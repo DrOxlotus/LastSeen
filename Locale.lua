@@ -26,6 +26,11 @@ local L = setmetatable({}, { __index = function(t, k)
 end })
 if (locale == "enGB" or locale == "enUS") then
 		-- Objects
+		L["Ancient Treasure"]						= "Ancient Treasure"
+		L["Gordok Tribute"]							= "Gordok Tribute"
+		L["Treasure of the Shen'dralar"]			= "Treasure of the Shen'dralar"
+		L["Chest of The Seven"]						= "Chest of The Seven"
+		L["Cache of the Firelord"]					= "Cache of the Firelord"
 		L["Large Battered Chest"]					= "Large Battered Chest"
 		L["Cache of Pure Energy"]					= "Cache of Pure Energy"
 		L["Spoils of Blackfathom"]					= "Spoils of Blackfathom"
