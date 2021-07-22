@@ -3,7 +3,7 @@
 ## Name: |cff00CCFFLastSeen|r
 ## Notes: Harvests source data on items looted by your characters to simplify item tracking in the future.
 ## Title: |cff00CCFFLastSeen|r
-## SavedVariables: LastSeenItems, LastSeenCreatures, LastSeenCreaturesDB, LastSeenEncountersDB, LastSeenIgnoredItemsDB, LastSeenItemsDB, LastSeenMapsDB, LastSeenQuestsDB, LastSeenSettingsCacheDB, LastSeenLootTemplate, LastSeenHistoryDB
+## SavedVariables: LastSeenItems, LastSeenCreatures, LastSeenIgnoredItems
 ## Version: 4.0.0
 
 # The file controlling localization for the addon.
