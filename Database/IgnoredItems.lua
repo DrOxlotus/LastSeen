@@ -9,8 +9,6 @@ local ignoredItems = {
 	186201, -- Ancient Anima Vessel
 	187349, -- Anima Laden Egg
 	186204, -- Anima-Stained Glass Shards
-	186204, -- Anima-Stained Glass Shards
-	181540, -- Animaflower Bud
 	181540, -- Animaflower Bud
 	187517, -- Animaswell Prism
 	181477, -- Ardendew Pearl
@@ -18,7 +16,6 @@ local ignoredItems = {
 	184773, -- Battle-Tested Armor Component
 	181545, -- Bloodbound Globule
 	184150, -- Bonded Tallow Candles
-	184152, -- Bottle of Diluted Anima-Wine
 	184152, -- Bottle of Diluted Anima-Wine
 	181646, -- Bound Failsafe Phylactery
 	183723, -- Brimming Anima Orb
@@ -30,7 +27,6 @@ local ignoredItems = {
 	181552, -- Collected Tithe
 	184764, -- Colossus Actuator
 	186519, -- Compressed Anima Bubble
-	184148, -- Concealed Sinvyr Flask
 	184148, -- Concealed Sinvyr Flask
 	187347, -- Concentrated Anima
 	181544, -- Confessions of Misdeed
