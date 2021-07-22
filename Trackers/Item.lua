@@ -42,6 +42,9 @@ e:SetScript("OnEvent", function(self, event, ...)
 					end
 					for _, ignoredItemID in ipairs(addonTable.ignoredItems) do
 						if (ignoredItemID == itemID) then return end
+					end
+					for _, ignoredItemID in ipairs(LastSeenIgnoredItems) do
+						if (ignoredItemID == itemID) then return end
 					end]]
 					-- Let's get the current patch and date to store in the table.
 					patch = GetBuildInfo()
