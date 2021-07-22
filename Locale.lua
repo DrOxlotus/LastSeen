@@ -32,6 +32,8 @@ if (locale == "enGB" or locale == "enUS") then
 		L["Chest of The Seven"]						= "Chest of The Seven"
 		L["Cache of the Firelord"]					= "Cache of the Firelord"
 		L["Large Battered Chest"]					= "Large Battered Chest"
+		L["Reinforced Fel Iron Chest"]				= "Reinforced Fel Iron Chest"
+		L["Dust Covered Chest"]						= "Dust Covered Chest"
 		L["Cache of Pure Energy"]					= "Cache of Pure Energy"
 		L["Spoils of Blackfathom"]					= "Spoils of Blackfathom"
 		L["Invasive Mawshroom"]						= "Invasive Mawshroom"
