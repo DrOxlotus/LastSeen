@@ -36,9 +36,12 @@ e:SetScript("OnEvent", function(self, event, ...)
 					if (itemQuality == nil) then return end
 					-- We need to filter out items that we don't care about.
 					--[[if (itemQuality < 1) then return end
-					for j = 1, #ignoredItemTypes do
-						if (ignoredItemTypes[j] == itemType) then return end
-						if (ignoredItemTypes[j] == itemSubType) then return end
+					for type = 1, #ignoredItemTypes do
+						if (ignoredItemTypes[type] == itemType) then return end
+						if (ignoredItemTypes[type] == itemSubType) then return end
+					end
+					for _, ignoredItemID in ipairs(addonTable.ignoredItems) do
+						if (ignoredItemID == itemID) then return end
 					end]]
 					-- Let's get the current patch and date to store in the table.
 					patch = GetBuildInfo()
