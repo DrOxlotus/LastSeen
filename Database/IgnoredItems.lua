@@ -127,6 +127,8 @@ local ignoredItems = {
 	187458, -- Unearthed Teleporter Sigil
 	187459, -- Vial of Mysterious Liquid
 	187478, -- White Razorwing Talon
+	-- Shadowlands: Miscellaneous
+	187216, -- Soultwining Crescent
 }
 
 addonTable.ignoredItems = ignoredItems

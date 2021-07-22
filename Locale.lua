@@ -44,6 +44,8 @@ if (locale == "enGB" or locale == "enUS") then
 		L["Relic Cache"]							= "Relic Cache"
 		L["Riftbound Cache"]						= "Riftbound Cache"
 		L["Rift Hidden Cache"]						= "Rift Hidden Cache"
+		L["Seeping Cone"]							= "Seeping Cone"
+		L["Drop Box"]								= "Drop Box"
 		-- Strings
 		L["Colored Addon Name"] 					= "|cff00CCFF" .. addonName .. "|r: "
 		L["Info Source Unavailable"]				= "Please report the information below:"
