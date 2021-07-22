@@ -4,7 +4,7 @@ local L = addonTable.L
 -- These are items that don't need to be tracked because people won't care.
 -- Examples: Anima, Cataloged Research, Azerite, etc.
 local ignoredItems = {
-	-- Shadowlands
+	-- Shadowlands: Anima
 	184147, -- Agony Enrichment Device
 	186201, -- Ancient Anima Vessel
 	187349, -- Anima Laden Egg
@@ -102,6 +102,35 @@ local ignoredItems = {
 	184149, -- Widowbloom-Infused Fragrance
 	187433, -- Windcrystal Chimes
 	181648, -- Ziggurat Focusing Crystal
+	-- Shadowlands: Cataloged Research
+	187311, -- Azgoth's Tattered Maps
+	187465, -- Complicated Organism Harmonizer
+	187333, -- Core of an Unknown Titan
+	187322, -- Crumbling Stone Tablet
+	187350, -- Displaced Relic
+	187327, -- Encrypted Korthian Journal
+	187457, -- Engraved Glass Pane
+	187463, -- Enigmatic Map Fragments
+	187325, -- Faded Razorwing Anatomy Illustration
+	187336, -- Forbidden Weapons Schematics
+	187324, -- Gnawed Ancient Idol
+	187326, -- Half-Completed Runeforge Pattern
+	187466, -- Korthian Cypher Book
+	187335, -- Maldraxxus Larva Shell
+	187330, -- Naaru Shard Fragment
+	187329, -- Old God Specimen Jar
+	187467, -- Perplexing Rune-Cube
+	187332, -- Recovered Page of Voices
+	186685, -- Relic Fragment
+	187328, -- Ripped Cosmology Chart
+	187323, -- Runic Diagram
+	187462, -- Scroll of Shadowlands Fables
+	187334, -- Shattered Void Tablet
+	187460, -- Strangely Intricate Key
+	187331, -- Tattered Fae Designs
+	187458, -- Unearthed Teleporter Sigil
+	187459, -- Vial of Mysterious Liquid
+	187478, -- White Razorwing Talon
 }
 
 addonTable.ignoredItems = ignoredItems
