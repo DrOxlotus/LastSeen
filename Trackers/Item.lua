@@ -78,11 +78,14 @@ e:SetScript("OnEvent", function(self, event, ...)
 							if (LastSeenItems[itemID]["sourceInfo"].name ~= source) then
 								LastSeenItems[itemID]["sourceInfo"].name = source
 							end
-							if (LastSeenItems[itemID].class ~= addonTable.playerClass) then
-								LastSeenItems[itemID].class = addonTable.playerClass
+							if (LastSeenItems[itemID]["playerInfo"].race ~= addonTable.playerRace) then
+								LastSeenItems[itemID]["playerInfo"].race = addonTable.playerRace
 							end
-							if (LastSeenItems[itemID].level ~= addonTable.playerLevel) then
-								LastSeenItems[itemID].level = addonTable.playerLevel
+							if (LastSeenItems[itemID]["playerInfo"].class ~= addonTable.playerClass) then
+								LastSeenItems[itemID]["playerInfo"].class = addonTable.playerClass
+							end
+							if (LastSeenItems[itemID]["playerInfo"].level ~= addonTable.playerLevel) then
+								LastSeenItems[itemID]["playerInfo"].level = addonTable.playerLevel
 							end
 						else
 							-- This is a new item.
