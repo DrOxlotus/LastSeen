@@ -28,7 +28,7 @@ e:SetScript("OnEvent", function(self, event, ...)
 		for i = 1, numLootItems do
 			itemLink = GetLootSlotLink(i)
 			if (itemLink) then
-				lootSourceGUID = (GetLootSourceInfo(i))
+				lootSourceGUID = (GetLootSourceInfo(i)) print(lootSourceGUID)
 				if (lootSourceGUID) then
 					_, _, _, _, _, entityID = strsplit("-", lootSourceGUID); entityID = tonumber(entityID)
 					_, itemID = strsplit(":", itemLink); itemID = tonumber(itemID)
@@ -64,18 +64,19 @@ e:SetScript("OnEvent", function(self, event, ...)
 					end
 					-- The item shouldn't be filtered out, so let's add it to the Items table.
 					if (LastSeenItems[itemID]) then
+						print(itemID)
 						-- This isn't a NEW item. Confirm if any information requires an update.
-						if (LastSeenItems[itemID].lootDate ~= lootDate) then
-							LastSeenItems[itemID].lootDate = lootDate
+						if (LastSeenItems[itemID]["sourceInfo"].lootDate ~= lootDate) then
+							LastSeenItems[itemID]["sourceInfo"].lootDate = lootDate
 						end
-						if (LastSeenItems[itemID].patch ~= patch) then
-							LastSeenItems[itemID].patch = patch
+						if (LastSeenItems[itemID]["sourceInfo"].patch ~= patch) then
+							LastSeenItems[itemID]["sourceInfo"].patch = patch
 						end
-						if (LastSeenItems[itemID].map ~= addonTable.uiMapName) then
-							LastSeenItems[itemID].map = addonTable.uiMapName
+						if (LastSeenItems[itemID]["sourceInfo"].map ~= addonTable.uiMapName) then
+							LastSeenItems[itemID]["sourceInfo"].map = addonTable.uiMapName
 						end
-						if (LastSeenItems[itemID].name ~= source) then
-							LastSeenItems[itemID].name = source
+						if (LastSeenItems[itemID]["sourceInfo"].name ~= source) then
+							LastSeenItems[itemID]["sourceInfo"].name = source
 						end
 						if (LastSeenItems[itemID].class ~= addonTable.playerClass) then
 							LastSeenItems[itemID].class = addonTable.playerClass
