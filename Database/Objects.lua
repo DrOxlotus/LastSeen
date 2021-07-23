@@ -60,12 +60,19 @@ local objects = {
 	[368649]		= L["Rift Hidden Cache"],
 	[368650]		= L["Rift Hidden Cache"],
 	-- The objects below this line are here for the sake of consistency in the addon's output. These likely won't have any collectibles...ever.
+	[368601]		= L["Stolen Message"],
 	[368602]		= L["Seeping Cone"],
 	[368629]		= L["Drop Box"],
 	[368192]		= L["Drop Box"],
 	[368623]		= L["Drop Box"],
 	[368630]		= L["Drop Box"],
 	[368631]		= L["Drop Box"],
+	[368177]		= L["Observation Device"],
+	[368624]		= L["Observation Device"],
+	[368625]		= L["Observation Device"],
+	[368627]		= L["Observation Device"],
+	[368628]		= L["Observation Device"],
+	[369780]		= L["Observation Device"],
 }
 
 addonTable.objects = objects
